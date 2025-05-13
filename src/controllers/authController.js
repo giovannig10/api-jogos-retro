@@ -1,4 +1,4 @@
-import userModel from "../models/userModel.js";
+import UserModel from "../models/userModel.js";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
@@ -33,10 +33,10 @@ class AuthController {
         return res.status(400).json({ error: "Este email já está em uso!" });
       }
 
-      /*const userNicknameExists = await userModel.findByNickname(nickname);
+      const userNicknameExists = await UserModel.findByNickname(nickname);
       if (userNicknameExists) {
         return res.status(400).json({error: "Este nickname ja existe!"})
-      }*/
+      }
 
       //Hash da senha
        const hashedPassword = await bcrypt.hash(password, 10);
@@ -45,11 +45,12 @@ class AuthController {
        const data = {
          name,
          email,
+         nickname,
          password: hashedPassword,
        };
 
         //Criar usuário
-        const user = await userModel.create(data);
+        const user = await UserModel.create(data);
 
         return res.status(201).json({
             message: "Usuário criado com sucesso!",
