@@ -1,11 +1,18 @@
-## Contexto da Situação de Aprendizagem
+# PROBLEMA
 
-Você foi contratado como desenvolvedor back-end para criar um sistema de gerenciamento para uma coleção de card games de anime. O sistema precisa registrar as coleções que os jogadores possuem e os cards dentro de cada coleção. Uma coleção pode ter vários cards, mas um card específico só pode pertencer a uma única coleção.
+## Contexto
+O mercado de jogos retrô tem crescido significativamente nos últimos anos, com muitos entusiastas buscando informações sobre jogos clássicos, suas plataformas, desenvolvedores e outros detalhes históricos. No entanto, encontrar uma fonte centralizada e organizada de informações sobre esses jogos pode ser um desafio.
 
-O cliente deseja poder:
+## Problema
+Atualmente, não existe uma API acessível e bem estruturada que forneça dados sobre jogos retrô. Isso dificulta o desenvolvimento de aplicações, como sites, aplicativos móveis ou ferramentas de análise, que poderiam utilizar essas informações para atender às necessidades dos fãs e desenvolvedores.
 
-- Cadastrar, listar, atualizar e remover coleções
-- Cadastrar, listar, atualizar e remover cards
-- Manter a integridade do sistema (se uma coleção for removida, todos os cards dessa coleção também devem ser removidos automaticamente)
+## Objetivo
+Criar uma API que permita o acesso a informações detalhadas sobre jogos retrô, incluindo:
+- Nome do jogo
+- Plataforma(s)
+- Ano de lançamento
+- Desenvolvedor e publicador
+- Gênero
+- Descrição e curiosidades
 
-Para implementar o sistema, você usará NodeJS com JavaScript (ES Modules), seguindo o padrão MVC adaptado, e utilizará o Prisma como ORM para interagir com o banco de dados.
+Essa API deve ser fácil de usar, bem documentada e escalável, permitindo que desenvolvedores integrem seus dados em diferentes tipos de aplicações.
